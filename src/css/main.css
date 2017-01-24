@@ -19,6 +19,7 @@ a {
 
 main {
   text-align: center;
+  padding: inherit;
 }
 
 h2 {
