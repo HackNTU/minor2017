@@ -29,26 +29,14 @@ export default {
     return {
       items: [ //
         {
-          header: 'Header'
+          header: '大數據黑客松'
         }, {
           title: '首頁',
           group: '/company',
           items: [ //
             {
-              title: 'Home',
-              href: '/',
-              action: 'link'
-            }, {
-              title: 'counter',
-              href: '/counter',
-              action: 'link'
-            }, {
-              title: 'foo',
-              href: '/foo',
-              action: 'link'
-            }, {
-              title: 'bar',
-              href: '/bar',
+              title: 'Q & A',
+              href: '/qa',
               action: 'link'
             }
           ]
@@ -62,10 +50,8 @@ export default {
           href: "#!",
           action: 'link'
         }, {
-          header: 'Another Header'
-        }, {
-          title: 'Parallax',
-          href: "/parallax",
+          title: '聯絡我們',
+          href: "mailto:hackntu@gmail.com",
           action: 'link'
         }
       ]
