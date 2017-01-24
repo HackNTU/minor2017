@@ -2,7 +2,7 @@
   <v-app top-navbar footer left-fixed-sidebar>
     <header>
       <v-navbar ripple>
-        <v-navbar-logo>Vuetify</v-navbar-logo>
+        <v-navbar-logo>HackNTU</v-navbar-logo>
         <v-navbar-items></v-navbar-items>
       </v-navbar>
     </header>
@@ -31,7 +31,7 @@ export default {
         {
           header: 'Header'
         }, {
-          title: 'Parent',
+          title: '首頁',
           group: '/company',
           items: [ //
             {
@@ -53,12 +53,12 @@ export default {
             }
           ]
         }, {
-          title: 'Link',
+          title: '常見問題',
           href: "#!",
           action: 'link'
 
         }, {
-          title: 'Link',
+          title: '報名',
           href: "#!",
           action: 'link'
         }, {
