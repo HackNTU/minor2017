@@ -1,13 +1,13 @@
 <template>
-  <v-app top-navbar footer left-fixed-sidebar>
-    <header>
-      <v-navbar ripple>
-        <v-navbar-logo>HackNTU</v-navbar-logo>
-        <v-navbar-items></v-navbar-items>
+  <v-app top-navbar footer>
+
+      <v-navbar class="blue-grey darken-4">
+        <v-navbar-logo class="hidden-sm-and-down">HackNTU</v-navbar-logo>
+        <v-navbar-items v-bind:items="items"></v-navbar-items>
       </v-navbar>
-    </header>
+
     <main>
-      <v-sidebar id="sidebar" :items="items" left fixed router close-on-click></v-sidebar>
+      <!-- <v-sidebar id="sidebar" :items="items" left fixed router close-on-click></v-sidebar> -->
       <v-content>
         <v-container fluid>
           <transition name="slide-fade" mode="out-in">
@@ -15,8 +15,14 @@
           </transition>
         </v-container>
       </v-content>
+
     </main>
-    <v-footer></v-footer>
+
+    <!-- Footer -->
+    <v-footer class="blue-grey darken-4">
+      <div class="text-xs-center">HackNTU © 2017</div>
+    </v-footer>
+
   </v-app>
 </template>
 <script>
@@ -27,32 +33,34 @@ export default {
   },
   data() {
     return {
+      home:{
+        text: 'HackNTU',
+        href: '#/',
+        action: 'link'
+      },
       items: [ //
         {
-          header: '大數據黑客松'
-        }, {
-          title: '首頁',
-          group: '/company',
-          items: [ //
-            {
-              title: 'Q & A',
-              href: '/qa',
-              action: 'link'
-            }
-          ]
-        }, {
-          title: '常見問題',
-          href: "#!",
+          text: '關於活動',
+          title: '關於活動',
+          href: "#/",
           action: 'link'
-
         }, {
+          text: '報名',
           title: '報名',
-          href: "#!",
+          href: "#/signup",
           action: 'link'
         }, {
-          title: '聯絡我們',
-          href: "mailto:hackntu@gmail.com",
+          text: '常見問題',
+          title: '常見問題',
+          href: "#/qa",
           action: 'link'
+        }, {
+          text: 'Facebook',
+          // icon: 'email',
+          title: 'Facebook',
+          href: "https://www.facebook.com/hackNTU/",
+          target: "_blank"
+          // action: 'link'
         }
       ]
     }

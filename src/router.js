@@ -16,6 +16,7 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/home', component: Home },
   { path: '/counter', component: Counter },
   { path: '/parallax', component: Parallax },
   { path: '/qa', component: Qa },

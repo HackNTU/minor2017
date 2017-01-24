@@ -2,10 +2,15 @@
   <div>
 
     <parallax></parallax><br><br>
+
     <about id="about"></about><br><br>
+
     <schedule></schedule><br><br>
+
     <reviewer></reviewer><br><br>
+
     <signup id="signup"></signup><br><br>
+
     <partners id="partners"></partners><br><br>
 
   </div>
