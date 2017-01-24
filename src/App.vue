@@ -2,7 +2,7 @@
   <v-app top-navbar footer left-fixed-sidebar>
     <header>
       <v-navbar ripple>
-        <v-navbar-logo>Vuetify</v-navbar-logo>
+        <v-navbar-logo>大數據黑客松</v-navbar-logo>
         <v-navbar-items></v-navbar-items>
       </v-navbar>
     </header>
@@ -29,43 +29,47 @@ export default {
     return {
       items: [ //
         {
-          header: 'Header'
+          header: '大數據黑客松'
         }, {
-          title: 'Parent',
+          title: '關於活動',
+          href: "",
+          action: 'link'
+
+        }, {
+          title: '流程',
+          href: "",
+          action: 'link'
+
+        }, {
+          title: '評審',
+          href: "",
+          action: 'link'
+
+        }, {
+          title: '報名',
           group: '/company',
           items: [ //
             {
-              title: 'Home',
-              href: '/',
-              action: 'link'
-            }, {
-              title: 'counter',
-              href: '/counter',
-              action: 'link'
-            }, {
-              title: 'foo',
-              href: '/foo',
-              action: 'link'
-            }, {
-              title: 'bar',
-              href: '/bar',
+              title: 'Q & A',
+              href: '/qa',
               action: 'link'
             }
           ]
         }, {
-          title: 'Link',
-          href: "#!",
+          title: '合作夥伴',
+          href: "",
           action: 'link'
 
         }, {
-          title: 'Link',
-          href: "#!",
+          header: '關於我們'
+        }, {
+          title: 'HackNTU',
+          // href: "https://www.hackntu.org/",官網建置中
+          href: "http://ppt.cc/xBsG",
           action: 'link'
         }, {
-          header: 'Another Header'
-        }, {
-          title: 'Parallax',
-          href: "/parallax",
+          title: '聯絡我們',
+          href: "mailto:hackntu@gmail.com",
           action: 'link'
         }
       ]
