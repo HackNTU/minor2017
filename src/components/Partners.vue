@@ -21,7 +21,7 @@
 </template>
 <script>
 export default {
-  name: 'Q1:',
+  name: 'partners',
   data: {
     numbers: [ 2, 3, 4, 5 ]
   }

@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  name: 'Q1:'
+  name: 'schedule'
 }
 </script>
 <style scoped>
