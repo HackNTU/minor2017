@@ -1,10 +1,8 @@
+<!-- TODO: #/timer和Timer.vue中的two_digits可用，#/countdown和Countdown.vue裡的two_digits就抓不到 -->
+
 <template>
   <div id="countdown">
 
-    <div class="block">
-      <p class="digit">{{ nownow }}</p>
-      <p class="text">(nownow)</p>
-    </div>
     <div class="block">
       <p class="digit">{{ days | two_digits }}</p>
       <p class="text">Days</p>
@@ -37,38 +35,30 @@ export default {
     console.log("READY!!!");
   },
 
-  props : {
-    date : {
-      type: Number,
-      // coerce: str => Math.trunc(Date.parse(str) / 1000)
-    }
-  },
+  props: ['deadline'],
 
   data: function() {
     return {
-      now: Math.trunc((new Date()).getTime() / 1000)
+      now: Math.trunc((new Date()).getTime() / 1000),
     }
   },
 
   computed: {
+    normalizedDate: function() {
+      return Math.trunc(Date.parse(this.deadline) / 1000);
+    },
     seconds() {
-      return (this.date - this.now) % 60;
+      return (this.normalizedDate - this.now) % 60;
     },
     minutes() {
-      return Math.trunc((this.date - this.now) / 60) % 60;
+      return Math.trunc((this.normalizedDate - this.now) / 60) % 60;
     },
     hours() {
-      return Math.trunc((this.date - this.now) / 60 / 60) % 24;
+      return Math.trunc((this.normalizedDate - this.now) / 60 / 60) % 24;
     },
     days() {
-      return Math.trunc((this.date - this.now) / 60 / 60 / 24);
+      return Math.trunc((this.normalizedDate - this.now) / 60 / 60 / 24);
     },
-    nownow(){
-      return this.now;
-    },
-    normalizedDate: function() {
-      return Math.trunc(this.date / 1000);
-    }
   }
 }
 

@@ -22,8 +22,10 @@
 <script>
 export default {
   name: 'partners',
-  data: {
-    numbers: [ 2, 3, 4, 5 ]
+  data: function() {
+    return {
+      numbers: [ 2, 3, 4, 5 ]
+    }
   }
 }
 </script>

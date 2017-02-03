@@ -11,6 +11,8 @@ import Schedule from './components/Schedule.vue'
 import Reviewer from './components/Reviewer.vue'
 import Signup from './components/Signup.vue'
 import Partners from './components/Partners.vue'
+import Timer from './components/Timer.vue'
+import Countdown from './components/Countdown.vue'
 
 Vue.use(VueRouter)
 
@@ -25,6 +27,8 @@ const routes = [
   { path: '/reviewer', component: Reviewer },
   { path: '/signup', component: Signup },
   { path: '/partners', component: Partners },
+  { path: '/timer', component: Timer },
+  { path: '/countdown', component: Countdown},
 ];
 
 const router = new VueRouter({
