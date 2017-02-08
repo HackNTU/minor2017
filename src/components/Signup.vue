@@ -21,7 +21,7 @@ import { reviewers } from '../service/airtable.js'
 console.log('reviewers in Foo: ', reviewers); // output 小黑客松-QA table as an Array of Object
 
 export default {
-  name: 'Q1:'
+  name: 'signup'
 }
 </script>
 <style scoped>

@@ -10,7 +10,7 @@
 </template>
 <script>
 export default {
-  name: 'Q1:'
+  name: 'reviewer'
 }
 </script>
 <style scoped>

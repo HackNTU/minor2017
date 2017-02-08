@@ -21,9 +21,11 @@
 </template>
 <script>
 export default {
-  name: 'Q1:',
-  data: {
-    numbers: [ 2, 3, 4, 5 ]
+  name: 'partners',
+  data: function(){
+    return {
+      numbers: [ 2, 3, 4, 5 ]
+    }
   }
 }
 </script>

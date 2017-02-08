@@ -13,7 +13,7 @@
 </template>
 <script>
 export default {
-  name: 'Q1:'
+  name: 'qa'
 }
 </script>
 <style scoped>
