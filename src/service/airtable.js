@@ -54,10 +54,10 @@ base('小黑客松-QA').select({
 }, function done(err) {
     if (err) { console.error(err); return; }
 });
- 
+
 
 // use all Airtable data in other file with `import alldata from '/path/to/airtable.js'`
 export default { schedule, reviewers, qas };
 
-// import only QA table with `import qas from '/path/to/airtable.js'`
+// import only QA table with `import { qas } from '/path/to/airtable.js'`
 export { schedule, reviewers, qas };
