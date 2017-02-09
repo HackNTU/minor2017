@@ -4,6 +4,7 @@ var base = new Airtable({apiKey: 'keyYBgDwHL1wU0BZh'}).base('appcs0kkOF4h36C7J')
 var schedule = [];
 var qas = [];
 var reviewers = [];
+var partners = [];
 
 // Fill schedule[] with data from 小黑客松-流程
 base('小黑客松-流程').select({
@@ -55,9 +56,21 @@ base('小黑客松-QA').select({
     if (err) { console.error(err); return; }
 });
 
+// Fill partners[] with data from 小黑客松-QA
+base('小黑客松-合作夥伴').select({
+    maxRecords: 10,
+    view: "Main View"
+}).eachPage(function page(records, fetchNextPage) {
+    records.forEach(function(record) {
+        partners.push(record);
+    });
+    fetchNextPage();
+}, function done(err) {
+    if (err) { console.error(err); return; }
+});
 
 // use all Airtable data in other file with `import alldata from '/path/to/airtable.js'`
-export default { schedule, reviewers, qas };
+export default { schedule, reviewers, qas, partners };
 
 // import only QA table with `import { qas } from '/path/to/airtable.js'`
-export { schedule, reviewers, qas };
+export { schedule, reviewers, qas, partners };
