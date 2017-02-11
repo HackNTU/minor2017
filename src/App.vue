@@ -9,7 +9,7 @@
     <main>
       <!-- <v-sidebar id="sidebar" :items="items" left fixed router close-on-click></v-sidebar> -->
       <v-content>
-        <v-container fluid>
+        <v-container fluid class="mx-5">
           <transition name="slide-fade" mode="out-in">
             <router-view></router-view>
           </transition>
