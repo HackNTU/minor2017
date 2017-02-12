@@ -19,14 +19,14 @@
           <v-card horizontal>
             <v-card-row :img="partner.get('Photo')[0].url" height="120px"></v-card-row>
             <v-card-column>
-              <v-card-row height="120px" class="brown white--text text-xs-left">
+              <v-card-row height="120px" class="blue white--text text-xs-left">
                 <v-card-text>
                   <strong>{{ partner.get('Name') }}</strong>
                   <v-spacer></v-spacer>
                   <div>{{ partner.get('Description') }}</div>
                 </v-card-text>
               </v-card-row>
-              <v-card-row actions class="brown darken-2">
+              <v-card-row actions class="blue darken-2">
                 <v-btn flat class="white--text">
                   <!-- TODO: Find more icons in https://material.io/icons/#ic_language -->
                   <v-icon left>language</v-icon>{{ partner.get('Link') }}
