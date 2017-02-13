@@ -1,10 +1,10 @@
 <template>
-  <v-app top-navbar footer>
+  <v-app top-toolbar footer>
 
-      <v-navbar class="blue-grey darken-4">
-        <v-navbar-logo class="hidden-sm-and-down">HackNTU</v-navbar-logo>
-        <v-navbar-items v-bind:items="items"></v-navbar-items>
-      </v-navbar>
+      <v-toolbar class="blue-grey darken-4">
+        <v-toolbar-logo class="hidden-sm-and-down">HackNTU</v-toolbar-logo>
+        <v-toolbar-items v-bind:items="items"></v-toolbar-items>
+      </v-toolbar>
 
     <main>
       <!-- <v-sidebar id="sidebar" :items="items" left fixed router close-on-click></v-sidebar> -->
