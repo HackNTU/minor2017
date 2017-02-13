@@ -28,9 +28,6 @@
 <script>
 export default {
   name: 'App',
-  mounted() {
-    this.$vuetify.init();
-  },
   data() {
     return {
       home:{
