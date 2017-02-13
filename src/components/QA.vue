@@ -1,17 +1,18 @@
 <template>
   <div>
 
-    <h3>Q & A</h3>
-    <h4>（樣式待補）</h4>
-    <v-container>
-      <div v-for="qa in qas">
-        <blockquote>
-          問題：{{qa.get('Question')}}
-        </blockquote>
-        <p>答案：{{qa.get('Answer')}}</p>
-      </div>
-    </v-container>
-    
+    <h3>常見問題</h3>
+    <h4>副標題</h4>
+
+    <v-expansion-panel expand>
+      <v-expansion-panel-content v-for="qa in qas">
+        <div slot="header">{{qa.get('Question')}}</div>
+        <v-card>
+          <v-card-text class="grey lighten-3">{{qa.get('Answer')}}</v-card-text>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+
   </div>
 </template>
 
@@ -27,8 +28,4 @@ export default {
 }
 </script>
 <style scoped>
-p {
-  padding: 1000;
-  margin: 1000;
-}
 </style>
