@@ -3,7 +3,9 @@
 
       <v-toolbar class="blue-grey darken-4">
         <v-toolbar-logo class="hidden-sm-and-down">HackNTU</v-toolbar-logo>
-        <v-toolbar-items v-bind:items="items"></v-toolbar-items>
+        <v-toolbar-items v-for="item in items">
+          <v-toolbar-item ripple v-bind:href="item.href"> {{ item.text }} </v-toolbar-item>
+        </v-toolbar-items>
       </v-toolbar>
 
     <main>
@@ -28,14 +30,14 @@
 <script>
 export default {
   name: 'App',
-  data() {
+  data: function(){
     return {
       home:{
         text: 'HackNTU',
         href: '#/',
         action: 'link'
       },
-      items: [ //
+      items: [
         {
           text: '關於活動',
           title: '關於活動',
