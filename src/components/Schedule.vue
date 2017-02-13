@@ -1,15 +1,44 @@
 <template>
   <div>
-    <h3>活動流程</h3>
-    <h6>時間、地點、餐食、保證金、器材...</h6>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+
+    <h4>活動流程</h4>
+
+    <h4>同步活動</h4>
+
+    <h4>賽前活動 pre-event</h4>
+    <v-carousel icon="remove">
+      <v-carousel-item
+      v-for="pre_event in pre_events"
+      v-bind:src="pre_event.get('Poster')[0].url"
+      />
+    </v-carousel>
+
   </div>
 </template>
 <script>
+import { pre_events } from '../service/airtable.js'
 export default {
-  name: 'schedule'
+  name: 'schedule',
+  data: function(){
+    return {
+      pre_events: pre_events,
+      // pre_events_1: {
+      //   a: {
+      //     src: 'http://www.istartedsomething.com/bingimages/cache/LakeWakapitu_EN-US11634817642_1366x768.jpg'
+      //   },
+      //   b: {
+      //     src: 'http://www.istartedsomething.com/bingimages/cache/LakeWakapitu_EN-US11634817642_1366x768.jpg'
+      //   }
+      // }
+    }
+  },
+  methods: function(){
+    return {
+      sayHi: function(){
+        console.log('hi!!!!!!');
+      }
+    }
+  }
 }
 </script>
 <style scoped>

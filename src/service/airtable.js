@@ -5,6 +5,7 @@ var schedule = [];
 var qas = [];
 var reviewers = [];
 var partners = [];
+var pre_events = [];
 
 // Fill schedule[] with data from 小黑客松-流程
 base('小黑客松-流程').select({
@@ -29,7 +30,7 @@ base('小黑客松-流程').select({
 });
 
 
-// Fill reviewers[] with data from 小黑客松-QA
+// Fill reviewers[] with data from 小黑客松-評審
 base('小黑客松-評審').select({
     maxRecords: 10,
     view: "Main View"
@@ -56,7 +57,7 @@ base('小黑客松-QA').select({
     if (err) { console.error(err); return; }
 });
 
-// Fill partners[] with data from 小黑客松-QA
+// Fill partners[] with data from 小黑客松-合作夥伴
 base('小黑客松-合作夥伴').select({
     maxRecords: 10,
     view: "Main View"
@@ -69,8 +70,23 @@ base('小黑客松-合作夥伴').select({
     if (err) { console.error(err); return; }
 });
 
+
+// Fill pre_events[] with data from 小黑客松-賽前活動
+base('小黑客松-賽前活動').select({
+    maxRecords: 10,
+    view: "Main View"
+}).eachPage(function page(records, fetchNextPage) {
+    records.forEach(function(record) {
+        pre_events.push(record);
+    });
+    fetchNextPage();
+}, function done(err) {
+    if (err) { console.error(err); return; }
+})
+
+
 // use all Airtable data in other file with `import alldata from '/path/to/airtable.js'`
-export default { schedule, reviewers, qas, partners };
+export default { schedule, reviewers, qas, partners, pre_events };
 
 // import only QA table with `import { qas } from '/path/to/airtable.js'`
-export { schedule, reviewers, qas, partners };
+export { schedule, reviewers, qas, partners, pre_events };
