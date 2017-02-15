@@ -1,17 +1,24 @@
 <template>
   <div class="block">
     <h3>主題介紹</h3>
-    <h5 class="mt-5">主題一</h5>
 
-    <p>Scroll Up and Down this page to see the parallax scrolling effect.</p>
+    <v-card class="mw-1000 mt-2">
+      <v-card-row class="blue-grey darken-3">
+        <v-card-title>
+          <span class="white--text">主題一</span>
+          <v-spacer></v-spacer>
+        </v-card-title>
+      </v-card-row>
+      <v-card-row img="/public/fintech.jpg" height="300px"></v-card-row>
+      <v-card-text class="blue-grey darken-3 white--text">
+        <!-- <div v-text="參賽者可利用主辦方提供之數據，自由運用各式分析、呈現工具，佐以其他開放資料，以期能從資料中挖出金融服務創新的契機；作品內容著重在呈現從數據挖出的特別現象，並須說明思考邏輯、分析方法、步驟等脈絡。"></div> -->
+        <div class="">
+          參賽者可利用主辦方提供之數據，自由運用各式分析、呈現工具，佐以其他開放資料，以期能從資料中挖出金融服務創新的契機；作品內容著重在呈現從數據挖出的特別現象，並須說明思考邏輯、分析方法、步驟等脈絡。
+        </div>
+      </v-card-text>
+    </v-card>
 
-    <div class="parallax"></div>
 
-    <!-- <div style="height:100px;background-color:red;font-size:36px">
-      Scroll Up and Down this page to see the parallax scrolling effect.
-      This div is just here to enable scrolling.
-      Tip: Try to remove the background-attachment property to remove the scrolling effect.
-    </div> -->
 
   </div>
 </template>

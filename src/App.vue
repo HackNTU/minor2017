@@ -21,7 +21,7 @@
     </main>
 
     <!-- Footer -->
-    <v-footer class="blue-grey darken-4">
+    <v-footer class="blue-grey darken-4 mt-5">
       <div class="text-xs-center">HackNTU © 2017</div>
     </v-footer>
 

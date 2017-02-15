@@ -1,19 +1,8 @@
 <template>
   <div>
     <h3>合作夥伴</h3>
-    <h4>副標題</h4>
 
-    <!-- TODO: simple version template, delete later if not needed -->
-    <!-- <v-container>
-      <div v-for="partner in partners">
-        <p>Name: {{ partner.get('Name') }}</p>
-        <img :src="partner.get('Photo')[0].url" height="75px">
-        <p>Description: {{ partner.get('Description') }}</p>
-      </div>
-    </v-container> -->
-
-    <!-- TODO: card version template, delete later if not needed -->
-    <v-container>
+    <!-- <v-container class="mw-1000 mt-5">
       <div v-for="partner in partners">
         <div class="partner">
           <v-card horizontal>
@@ -28,7 +17,6 @@
               </v-card-row>
               <v-card-row actions class="blue darken-2">
                 <v-btn flat class="white--text">
-                  <!-- TODO: Find more icons in https://material.io/icons/#ic_language -->
                   <v-icon left>language</v-icon>{{ partner.get('Link') }}
                 </v-btn>
               </v-card-row>
@@ -36,7 +24,21 @@
           </v-card>
         </div>
       </div>
-    </v-container>
+    </v-container> -->
+
+    <div v-for="partner in partners" class="mw-1000">
+      <div class="responsive">
+        <div class="img">
+          <a target="_blank" :href="partner.get('Link')">
+            <img :src="partner.get('Photo')[0].url" alt="Trolltunga Norway" width="300" height="200">
+          </a>
+          <div class="desc">
+            <b>{{ partner.get('Name') }}</b><br>
+            <!-- {{ partner.get('Title') }} -->
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </template>
@@ -54,4 +56,51 @@ export default {
 </script>
 
 <style scoped>
+div.img {
+  border: 1px solid #ccc;
+  max-width: 300px;
+}
+
+div.img:hover {
+  border: 1px solid #777;
+}
+
+div.img img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 </style>

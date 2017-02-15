@@ -1,19 +1,19 @@
 <template>
   <div>
 
-    <parallax></parallax><br><br>
+    <parallax></parallax>
 
-    <about></about><br><br>
+    <about></about><br><br><br>
 
-    <topics></topics><br><br>
+    <topics></topics><br><br><br>
 
-    <schedule></schedule><br><br>
+    <reviewer></reviewer><br><br><br>
 
-    <reviewer></reviewer><br><br>
+    <schedule></schedule><br><br><br>
 
-    <signup></signup><br><br>
+    <signup></signup><br><br><br>
 
-    <partners></partners><br><br>
+    <partners></partners><br><br><br>
 
   </div>
 </template>
