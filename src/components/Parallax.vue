@@ -9,8 +9,8 @@
     <div class="parallax">
       <div class="center">
         <img src="/public/v.png" max-width="50px" alt="hackNTU-logo">
-        <h6>HackNTU x 國泰</h6>
-        <h4>數據分析黑客松</h4>
+        <h6 style="color:#FFF">HackNTU x 國泰</h6>
+        <h4 style="color:#FFF">數據分析黑客松</h4>
       </div>
 
     </div>
