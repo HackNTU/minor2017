@@ -19,8 +19,17 @@ a {
 
 main {
   text-align: center;
+  padding: inherit;
 }
 
 h2 {
   text-align: center;
+}
+
+/* max-width restricted to 1000px */
+.mw-1000 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  /*border: 1px green solid;*/
 }
