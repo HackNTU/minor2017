@@ -11,7 +11,12 @@ module.exports = {
   resolve: {
     alias: {
       'public': path.resolve(__dirname, './public')
-    }
+    },
+    // TODO: fix some module path resolve error
+    // modules: [
+    //   path.resolve(__dirname, './'),
+    //   'node_modules'
+    // ]
   },
   module: {
     rules: [{
