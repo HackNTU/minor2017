@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div class="bloc">
-        <img src="/public/lib_edu.jpg" alt="liberal education building" height="160px">
+        <img src="public/lib_edu.jpg" alt="liberal education building" height="160px">
       </div>
     </section><br><br>
 

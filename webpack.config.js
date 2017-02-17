@@ -11,7 +11,12 @@ module.exports = {
   resolve: {
     alias: {
       'public': path.resolve(__dirname, './public')
-    }
+    },
+    // TODO: fix some module path resolve error
+    // modules: [
+    //   path.resolve(__dirname, './'),
+    //   'node_modules'
+    // ]
   },
   module: {
     rules: [{
@@ -34,6 +39,21 @@ module.exports = {
     }, {
       test: /\.styl$/,
       loader: ['style-loader', 'css-loader', 'stylus-loader']
+    }, {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }, {
+      test: /\.(png|jpg|gif|svg)$/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]?[hash]'
+      }
+    }, {
+      test: /\.(ttf|eot|otf|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]?[hash]'
+      }
     }]
   },
   devServer: {
