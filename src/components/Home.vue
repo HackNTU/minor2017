@@ -3,6 +3,8 @@
 
     <parallax></parallax>
 
+    <news></news>
+
     <about></about><br><br><br>
 
     <topics></topics><br><br><br>
@@ -19,6 +21,7 @@
 </template>
 <script>
 import Parallax from './Parallax.vue'
+import News from './News.vue'
 import About from './About.vue'
 import Topics from './Topics.vue'
 import Schedule from './Schedule.vue'
@@ -30,6 +33,7 @@ export default {
   name: 'home',
   components: {
     parallax: Parallax,
+    news: News,
     about: About,
     topics: Topics,
     schedule: Schedule,

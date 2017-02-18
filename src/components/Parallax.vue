@@ -1,9 +1,10 @@
 <template>
   <div>
 
-    <div class="parallax">
+    <div class="parallax" style="background-image: url('public/fintech.jpg')">
+    <!-- use inline style to avoid url() module resolve problem -->
       <div class="center" style="color:#FFF">
-        <img src="/public/v.png" max-width="50px" alt="hackNTU-logo">
+        <img src="public/v.png" max-width="50px" alt="hackNTU-logo">
         <h6 style="color:#FFF" class="mt-2 mb-0">HackNTU x 國泰</h6>
         <h2 style="color:#FFF">數據分析黑客松</h2>
         <pre>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -21,7 +22,8 @@ export default {
 <style scoped>
 .parallax {
   /* The image used */
-  background-image: url('/public/fintech.jpg');
+  /*background-image: url('public/fintech.jpg');*/ 
+  /* ^this would cause url() module resolve problem, maybe it is a loader bug*/
 
   /* Set a specific height */
   height: 70vh;
