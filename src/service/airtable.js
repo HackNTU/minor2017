@@ -6,6 +6,7 @@ var qas = [];
 var reviewers = [];
 var partners = [];
 var pre_events = [];
+var news = [];
 
 // Fill schedule[] with data from 小黑客松-流程
 base('小黑客松-流程').select({
@@ -85,8 +86,23 @@ base('小黑客松-賽前活動').select({
 })
 
 
+// Fill news[] with data from 小黑客松-最新消息
+base('小黑客松-最新消息').select({
+    maxRecords: 10,
+    view: "Main View"
+}).eachPage(function page(records, fetchNextPage) {
+    records.forEach(function(record) {
+        news.push(record);
+    });
+    fetchNextPage();
+}, function done(err) {
+    if (err) { console.error(err); return; }
+})
+
+
+
 // use all Airtable data in other file with `import alldata from '/path/to/airtable.js'`
-export default { schedule, reviewers, qas, partners, pre_events };
+export default { schedule, reviewers, qas, partners, pre_events, news };
 
 // import only QA table with `import { qas } from '/path/to/airtable.js'`
-export { schedule, reviewers, qas, partners, pre_events };
+export { schedule, reviewers, qas, partners, pre_events, news };
