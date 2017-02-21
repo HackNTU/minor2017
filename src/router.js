@@ -9,6 +9,7 @@ import Counter from './components/Counter.vue'
 import Parallax from './components/Parallax.vue'
 import QA from './components/QA.vue'
 import About from './components/About.vue'
+import Event from './components/event/Event.vue'
 import Schedule from './components/Schedule.vue'
 import Reviewer from './components/Reviewer.vue'
 import Signup from './components/Signup.vue'
@@ -30,6 +31,9 @@ const routes = [
   { path: '/signup', component: Signup },
   // STEP 2: 如果你的component即是一個頁面，直接在此綁定到路徑'/path'
   { path: '/template', component: Template },
+
+  // Dev only
+  { path: '/event', component: Event },
 ];
 
 const router = new VueRouter({

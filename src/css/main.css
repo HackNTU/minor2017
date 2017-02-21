@@ -1,3 +1,5 @@
+/* Change Vuetify component color here: node_modules/vuetify/src/stylus/settings/_colors.styl */
+
 .intro {
   display: flex;
   justify-content: center;
@@ -26,10 +28,6 @@ h2 {
   text-align: center;
 }
 
-/* max-width restricted to 1000px */
-.mw-1000 {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1000px;
-  /*border: 1px green solid;*/
+h3 {
+  padding-top: 20px
 }
