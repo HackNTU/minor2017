@@ -5,6 +5,8 @@
 
     <eventinfo></eventinfo>
 
+    <rule></rule>
+
     <schedule></schedule>
 
   </section>
@@ -12,11 +14,13 @@
 
 <script>
 import EventInfo from './EventInfo.vue'
+import Rule from './Rule.vue'
 import Schedule from './Schedule.vue'
 export default {
   name: 'event',
   components:{
     eventinfo: EventInfo,
+    rule: Rule,
     schedule:  Schedule,
   },
 }

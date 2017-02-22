@@ -4,8 +4,8 @@
     <h5>活動流程</h5>
 
     <v-tabs id="mobile-tabs-3" grow>
-      <v-tab-item :href="'/#/#day1'" slot="activators"> 3/18(六) </v-tab-item>
-      <v-tab-item :href="'/#/#day2'" slot="activators"> 3/19(日) </v-tab-item>
+      <v-tab-item ripple :href="'/#/#day1'" slot="activators"> 3/18(六) </v-tab-item>
+      <v-tab-item ripple :href="'/#/#day2'" slot="activators"> 3/19(日) </v-tab-item>
       <v-tab-content :id="'day1'" slot="content">
         <v-card>
           <v-card-text>111111!!!!!!!!!</v-card-text>

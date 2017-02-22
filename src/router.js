@@ -10,7 +10,6 @@ import Parallax from './components/Parallax.vue'
 import QA from './components/QA.vue'
 import About from './components/About.vue'
 import Event from './components/event/Event.vue'
-import Reviewer from './components/Reviewer.vue'
 import Signup from './components/Signup.vue'
 import Partners from './components/Partners.vue'
 
