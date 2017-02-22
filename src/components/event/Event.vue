@@ -5,15 +5,19 @@
 
     <eventinfo></eventinfo>
 
+    <schedule></schedule>
+
   </section>
 </template>
 
 <script>
 import EventInfo from './EventInfo.vue'
+import Schedule from './Schedule.vue'
 export default {
   name: 'event',
   components:{
     eventinfo: EventInfo,
+    schedule:  Schedule,
   },
 }
 </script>
