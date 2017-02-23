@@ -2,7 +2,7 @@
   <section>
 
     <v-card>
-      <v-card-row class="blue-grey darken-1">
+      <v-card-row class="blue darken-1">
         <v-card-title>
           <span class="white--text">活動辦法</span>
         </v-card-title>
@@ -16,7 +16,8 @@
               </v-list-tile-avatar>
               <v-list-tile-content>
                 <v-list-tile-title v-text="rule.get('Item')"/>
-                <v-list-tile-sub-title v-text="rule.get('Descr')"/>
+                <!-- <v-list-tile-sub-title v-text="rule.get('Descr')"/> -->
+                <v-list-tile-sub-title>{{ rule.get('Descr') }}<v-list-tile-sub-title/>
               </v-list-tile-content>
             </v-list-tile>
           </v-list-item>

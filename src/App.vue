@@ -36,24 +36,24 @@ export default {
     return {
       home:{
         text: 'HackNTU',
-        href: '/',
+        href: '#/',
         action: 'link'
       },
       items: [
         {
           text: '關於活動',
           title: '關於活動',
-          href: "/",
+          href: "#/",
           action: 'link'
         }, {
           text: '報名',
           title: '報名',
-          href: "/signup",
+          href: "#/signup",
           action: 'link'
         }, {
           text: '常見問題',
           title: '常見問題',
-          href: "/qa",
+          href: "#/qa",
           action: 'link'
         }, {
           text: 'Facebook',
