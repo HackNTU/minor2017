@@ -25,4 +25,10 @@ export default {
 </script>
 
 <style scoped>
+section {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
 </style>

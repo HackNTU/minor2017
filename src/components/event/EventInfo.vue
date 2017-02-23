@@ -1,7 +1,7 @@
 <template>
   <section>
     <v-card>
-      <v-card-row class="blue-grey darken-1">
+      <v-card-row class="blue darken-1">
         <v-card-title>
           <span class="white--text">活動資訊</span>
         </v-card-title>
@@ -11,12 +11,12 @@
           <v-icon class="mr-5">{{i.icon}}</v-icon>
           <div>
             <div class="text-xs-center text-sm-left">{{ i.title }}</div>
-            <strong><div class="text-sm-left">{{ i.descp }}</div></strong>
+            <strong><div class="text-xs-center text-sm-left">{{ i.descp }}</div></strong>
           </div>
         </v-card-row>
       </v-card-text>
       <v-card-row actions>
-        <v-btn flat class="green--text darken-1">地圖</v-btn>
+        <v-btn flat class="green--text darken-1"><v-icon left>directions</v-icon>地圖</v-btn>
       </v-card-row>
     </v-card>
   </section>
@@ -30,7 +30,7 @@ export default {
       items: [
         {
           title: '時間',
-          descp: '2017/03/18-19，六日兩天，0800-2200（過夜不間斷）',
+          descp: '2017/03/18 8:30 報到 ～ 2017/03/19 18:00 賦歸（兩天Hacking不間斷！）',
           icon:  'watch_later',
         },
         {
@@ -45,7 +45,7 @@ export default {
         },
         {
           title: '費用',
-          descp: '免報名費，僅收取保證金 元。',
+          descp: '免費！僅收取保證金新臺幣 300 元，於3/18 報到時全額退還。',
           icon:  'tag_faces',
         },
         {

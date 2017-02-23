@@ -1,7 +1,8 @@
 {
-  "name": "vuetify-webpack-simple",
-  "description": "Forked webpack simple from official vue docs",
-  "author": "John Leider <john.j.leider@gmail.com>",
+  "name": "hackntu-minor2017",
+  "version": "0.1.3",
+  "description": "Official website of 2017 HackNTU Minor Hackathon",
+  "author": "Choznerol <b02611002@ntu.edu.tw>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot --host=0.0.0.0 --port=8081",
