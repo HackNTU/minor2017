@@ -21,13 +21,15 @@
     </main>
 
     <!-- Footer -->
-    <v-footer class="blue-grey darken-4 mt-5">
-      <div class="text-xs-center">HackNTU © 2017</div>
-    </v-footer>
+    <footer>
+      <minor2017footer class="blue-grey darken-4 text-xs-center mt-5 mb-0 pa-3"></minor2017footer>
+      <v-footer class="blue-grey darken-4"></v-footer>
+    </footer>
 
   </v-app>
 </template>
 <script>
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   data: function(){
@@ -63,6 +65,9 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    minor2017footer: Footer,
   }
 }
 </script>
