@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <v-container class="mw-1000">
     <h3>報名</h3>
     <h6>流程、表單、條列注意事項...</h6>
@@ -7,7 +7,7 @@
     <v-btn info large>個人報名</v-btn>
     <v-btn info large>團體報名</v-btn>
     </v-container>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -17,4 +17,10 @@ export default {
 }
 </script>
 <style scoped>
+section {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
 </style>

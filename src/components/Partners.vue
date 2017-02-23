@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <h3>合作夥伴</h3>
 
     <!-- <v-container class="mw-1000 mt-5">
@@ -40,7 +40,7 @@
       </div>
     </div>
 
-  </div>
+  </section>
 </template>
 
 <script>
@@ -102,5 +102,11 @@ div.desc {
   content: "";
   display: table;
   clear: both;
+}
+section {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 </style>
