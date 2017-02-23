@@ -1,6 +1,7 @@
 <template>
   <div>
 
+    <!-- TODO: 手機看偏右下，是否有除了<col>的解法？ -->
     <v-container fluid="fluid">
 
       <!-- simple items -->
