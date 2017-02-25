@@ -2,30 +2,6 @@
   <section>
     <h3>合作夥伴</h3>
 
-    <!-- <v-container class="mw-1000 mt-5">
-      <div v-for="partner in partners">
-        <div class="partner">
-          <v-card horizontal>
-            <v-card-row :img="partner.get('Photo')[0].url" height="120px"></v-card-row>
-            <v-card-column>
-              <v-card-row height="120px" class="blue white--text text-xs-left">
-                <v-card-text>
-                  <strong>{{ partner.get('Name') }}</strong>
-                  <v-spacer></v-spacer>
-                  <div>{{ partner.get('Description') }}</div>
-                </v-card-text>
-              </v-card-row>
-              <v-card-row actions class="blue darken-2">
-                <v-btn flat class="white--text">
-                  <v-icon left>language</v-icon>{{ partner.get('Link') }}
-                </v-btn>
-              </v-card-row>
-            </v-card-column>
-          </v-card>
-        </div>
-      </div>
-    </v-container> -->
-
     <div v-for="partner in partners" class="mw-1000">
       <div class="responsive">
         <div class="img">
@@ -34,7 +10,6 @@
           </a>
           <div class="desc">
             <b>{{ partner.get('Name') }}</b><br>
-            <!-- {{ partner.get('Title') }} -->
           </div>
         </div>
       </div>
@@ -59,6 +34,8 @@ export default {
 div.img {
   border: 1px solid #ccc;
   max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.img:hover {

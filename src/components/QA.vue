@@ -1,19 +1,19 @@
 <template>
-  <div>
+  <section>
 
     <h3>常見問題</h3>
     <h4>副標題</h4>
 
-    <v-expansion-panel expand>
-      <v-expansion-panel-content v-for="qa in qas">
-        <div slot="header">{{qa.get('Question')}}</div>
-        <v-card>
+    <v-expansion-panel>
+      <v-expansion-panel-content v-for="qa in qas" class="py-2">
+        <div slot="header" class="mr-5">{{qa.get('Question')}}</div>
+        <v-card class="my-1">
           <v-card-text class="grey lighten-3">{{qa.get('Answer')}}</v-card-text>
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
 
-  </div>
+  </section>
 </template>
 
 <script>
@@ -28,4 +28,10 @@ export default {
 }
 </script>
 <style scoped>
+section {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
 </style>
