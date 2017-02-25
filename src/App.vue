@@ -21,37 +21,39 @@
     </main>
 
     <!-- Footer -->
-    <v-footer class="blue-grey darken-4 mt-5">
-      <div class="text-xs-center">HackNTU © 2017</div>
-    </v-footer>
+    <footer>
+      <minor2017footer class="blue-grey darken-4 text-xs-center mt-5 mb-0 pa-3"></minor2017footer>
+      <v-footer class="blue-grey darken-4"></v-footer>
+    </footer>
 
   </v-app>
 </template>
 <script>
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   data: function(){
     return {
       home:{
         text: 'HackNTU',
-        href: '/',
+        href: '#/',
         action: 'link'
       },
       items: [
         {
           text: '關於活動',
           title: '關於活動',
-          href: "/",
+          href: "#/",
           action: 'link'
         }, {
           text: '報名',
           title: '報名',
-          href: "/signup",
+          href: "#/signup",
           action: 'link'
         }, {
           text: '常見問題',
           title: '常見問題',
-          href: "/qa",
+          href: "#/qa",
           action: 'link'
         }, {
           text: 'Facebook',
@@ -63,6 +65,9 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    minor2017footer: Footer,
   }
 }
 </script>
