@@ -3,17 +3,17 @@
 
     <parallax></parallax>
 
-    <news></news>
+    <!-- <news></news> -->
 
-    <about></about><br><br><br>
+    <about></about>
 
-    <topics></topics><br><br><br>
+    <!-- <topics></topics><br><br><br> -->
 
-    <event></event><br><br><br>
+    <event></event>
 
-    <signup></signup><br><br><br>
+    <signup></signup>
 
-    <partners></partners><br><br><br>
+    <partners></partners>
 
   </div>
 </template>

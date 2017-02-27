@@ -1,28 +1,22 @@
 <template>
-  <section>
+  <section class="mt-5 mb-0">
 
     <v-card>
       <v-card-row class="blue darken-1">
         <v-card-title>
-          <span class="white--text">活動辦法</span>
+          <span class="white--text text-xs-center text-sm-left">活動辦法</span>
         </v-card-title>
       </v-card-row>
-      <v-list two-line>
-        <template v-for="rule in rules">
-          <v-list-item>
-            <v-list-tile avatar>
-              <v-list-tile-avatar>
-                <v-icon class="grey--text text--darken-2">info</v-icon>
-              </v-list-tile-avatar>
-              <v-list-tile-content>
-                <v-list-tile-title v-text="rule.get('Item')"/>
-                <!-- <v-list-tile-sub-title v-text="rule.get('Descr')"/> -->
-                <v-list-tile-sub-title>{{ rule.get('Descr') }}<v-list-tile-sub-title/>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list-item>
-        </template>
-      </v-list>
+
+      <template class="hidden-sm-and-down">
+        <v-card-row v-for="rule in rules">
+          <v-card-text class="text-xs-left mx-4">
+            <strong><div>{{rule.get('Item')}}</div></strong>
+            {{rule.get('Descr')}}
+          </v-card-text>
+        </v-card-row>
+      </template>
+
     </v-card>
 
   </section>

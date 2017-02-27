@@ -1,13 +1,10 @@
 <template>
   <div>
 
-    <!-- TODO: 手機看偏右下，是否有除了<col>的解法？ -->
-    <v-container fluid="fluid">
-
       <!-- simple items -->
       <v-row v-for="item in items" class="my-2">
         <v-col xs6="xs6" class="text-xs-right">
-          <v-chip label outline class="red red--text mr-3">
+          <v-chip label outline class="red red--text mr-5">
             <v-icon left>label</v-icon>{{item.chip}}
           </v-chip>
         </v-col>
@@ -20,19 +17,16 @@
       <!-- complex items -->
       <v-row>
         <v-col xs6="xs6" class="text-xs-right">
-          <v-chip label outline class="red red--text mr-3">
+          <v-chip label outline class="red red--text mr-5">
             <v-icon left>label</v-icon>贊助單位
           </v-chip>
         </v-col>
         <v-col xs6="xs6" class="text-xs-left">
           <div class="white--text" v-for="p in partners">
-            <!-- <span>{{ p.get('Name') }}</span> -->
             <img :src="p.get('Photo')[0].url" height="30em">
           </div>
         </v-col>
       </v-row>
-
-    </v-container>
 
   </div>
 </template>

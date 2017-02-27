@@ -1,13 +1,21 @@
 <template>
   <section>
 
-    <h5>活動流程</h5>
+    <h3>活動流程</h3>
 
     <v-tabs id="mobile-tabs-3" grow>
-      <v-tab-item ripple :href="'/#/#day1'" slot="activators"> 3/18(六) </v-tab-item>
-      <v-tab-item ripple :href="'/#/#day2'" slot="activators"> 3/19(日) </v-tab-item>
+      <v-tab-item ripple :href="'/#/#day1'" slot="activators">
+        <pre v-on:click="tab=318" class="tab">   </pre>
+        <div v-on:click="tab=318" class="tab">3/18(六)</div>
+        <pre v-on:click="tab=318" class="tab">   </pre>
+      </v-tab-item>
+      <v-tab-item ripple :href="'/#/#day2'" slot="activators">
+        <pre v-on:click="tab=319" class="tab">   </pre>
+        <div v-on:click="tab=319" class="tab">3/19(日)</div>
+        <pre v-on:click="tab=319" class="tab">   </pre>
+      </v-tab-item>
       <v-tab-content :id="'day1'" slot="content">
-        <v-card>
+        <v-card v-on:click="tab=318">
           <v-card-text>111111!!!!!!!!!</v-card-text>
         </v-card>
       </v-tab-content>
@@ -20,12 +28,21 @@
 
     <table>
       <tbody>
-        <template v-for="s in schedule" v-if="s.get('Date')=='2017-03-18'">
-          <tr>
-            <!-- <td v-text="s.get('Date')"></td> -->
-            <td v-text="s.get('Time')"></td>
-            <td v-text="s.get('Name')"></td>
-          </tr>
+        <template v-if="tab == 318">
+          <template v-for="s in schedule" v-if="s.get('Date')=='2017-03-18'">
+            <tr>
+              <td v-text="s.get('Time')"></td>
+              <td v-text="s.get('Name')"></td>
+            </tr>
+          </template>
+        </template>
+        <template v-else="tab == 319">
+          <template v-for="s in schedule" v-if="s.get('Date')=='2017-03-19'">
+            <tr>
+              <td v-text="s.get('Time')"></td>
+              <td v-text="s.get('Name')"></td>
+            </tr>
+          </template>
         </template>
       </tbody>
     </table>
@@ -43,7 +60,8 @@ export default {
       header: [
         '時間',
         '活動',
-      ]
+      ],
+      tab: 318,
     }
   },
 }
@@ -61,5 +79,9 @@ table td, table th {
     text-align: center;
     width: 50%;
     /*border: solid green 1px;*/
+}
+.tab{
+  /*border: green 1px solid;*/
+  width: 100%;
 }
 </style>

@@ -56,9 +56,9 @@ export default {
           href: "#/qa",
           action: 'link'
         }, {
-          text: 'Facebook',
+          text: 'FB',
           // icon: 'email',
-          title: 'Facebook',
+          title: 'FB',
           href: "https://www.facebook.com/hackNTU/",
           target: "_blank"
           // action: 'link'

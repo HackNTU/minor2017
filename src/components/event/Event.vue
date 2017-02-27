@@ -1,15 +1,13 @@
 <template>
   <section class="flexbox">
 
-    <h3>活動</h3>
-
-    <eventinfo></eventinfo>
+    <schedule></schedule>
 
     <rule></rule>
 
-    <schedule></schedule>
-
     <preevents></preevents>
+
+    <eventinfo></eventinfo>
 
   </section>
 </template>
