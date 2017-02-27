@@ -1,22 +1,33 @@
 <template>
-  <section>
+  <section class="mt-5">
     <v-card>
+
+      <!-- Title -->
       <v-card-row class="blue darken-1">
         <v-card-title>
           <span class="white--text">活動資訊</span>
         </v-card-title>
       </v-card-row>
+
+      <!-- Items -->
       <v-card-text v-for="i in items">
-        <v-card-row height="48px" id="v-card-row">
-          <v-icon class="mr-5">{{i.icon}}</v-icon>
+        <v-card-row class="pt-1" id="v-card-row">
+          <v-icon class="mr-4">{{i.icon}}</v-icon>
           <div>
-            <div class="text-xs-center text-sm-left">{{ i.title }}</div>
-            <strong><div class="text-xs-center text-sm-left">{{ i.descp }}</div></strong>
+            <strong><div class="text-xs-left">{{ i.title }}</div></strong>
+            <div class="text-xs-left">{{ i.descp }}</div>
           </div>
         </v-card-row>
       </v-card-text>
+
+      <!-- Google Map -->
+      <v-card-row>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57834.704881184225!2d121.4688627944242!3d25.045302843194733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94922d056a3%3A0x92caa79347844314!2z5Y2h5biC6YGU5Ym15qWt5Yqg5rK556uZIOWck-WxseWfuuWcsA!5e0!3m2!1szh-TW!2stw!4v1488214436630" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </v-card-row>
+
+      <!-- Google Map Link -->
       <v-card-row actions>
-        <v-btn flat class="green--text darken-1"><v-icon left>directions</v-icon>地圖</v-btn>
+        <v-btn flat class="green--text darken-1"><v-icon left>directions</v-icon>Google 地圖</v-btn>
       </v-card-row>
     </v-card>
   </section>

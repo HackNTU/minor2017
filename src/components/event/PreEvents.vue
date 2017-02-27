@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section class="mt-5">
 
-    <h5>賽前活動</h5>
+    <h3>賽前活動</h3>
     <v-carousel icon="remove">
       <v-carousel-item
       v-for="pre_event in pre_events"

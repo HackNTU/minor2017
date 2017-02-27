@@ -12,7 +12,7 @@ var rules = [];
 // Fill schedule[] with data from 小黑客松-流程
 base('小黑客松-流程').select({
     // Selecting the first 10 records in Main View:
-    maxRecords: 10,
+    maxRecords: 20,
     view: "Main View"
 }).eachPage(function page(records, fetchNextPage) {
     // This function (`page`) will get called for each page of records.
