@@ -10,7 +10,7 @@
       </v-card-row>
 
       <!-- Items -->
-      <v-card-text v-for="i in items">
+      <v-card-text v-for="i in items" :key="i.id">
         <v-card-row class="pt-1" id="v-card-row">
           <v-icon class="mr-4">{{i.icon}}</v-icon>
           <div>

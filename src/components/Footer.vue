@@ -2,7 +2,7 @@
   <div>
 
       <!-- simple items -->
-      <v-row v-for="item in items" class="my-2">
+      <v-row v-for="item in items" :key="item.id" class="my-2">
         <v-col xs6="xs6" class="text-xs-right">
           <v-chip label outline class="red red--text mr-5">
             <v-icon left>label</v-icon>{{item.chip}}
@@ -22,7 +22,7 @@
           </v-chip>
         </v-col>
         <v-col xs6="xs6" class="text-xs-left">
-          <div class="white--text" v-for="p in partners">
+          <div class="white--text" v-for="p in partners" :key="p.id">
             <img :src="p.get('Photo')[0].url" height="30em">
           </div>
         </v-col>

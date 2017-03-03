@@ -9,7 +9,7 @@
       </v-card-row>
 
       <template class="hidden-sm-and-down">
-        <v-card-row v-for="rule in rules">
+        <v-card-row v-for="rule in rules" :key="rule.id">
           <v-card-text class="text-xs-left mx-4">
             <strong><div>{{rule.get('Item')}}</div></strong>
             {{rule.get('Descr')}}

@@ -3,7 +3,7 @@
 
       <v-toolbar class="blue-grey darken-4">
         <v-toolbar-logo class="hidden-sm-and-down">HackNTU</v-toolbar-logo>
-        <v-toolbar-items v-for="item in items">
+        <v-toolbar-items v-for="item in items" :key="item.id">
           <v-toolbar-item ripple v-bind:href="item.href"> {{ item.text }} </v-toolbar-item>
         </v-toolbar-items>
       </v-toolbar>
