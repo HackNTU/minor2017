@@ -50,15 +50,15 @@ export default {
           title: '報名',
           href: "#/signup",
           action: 'link'
+        // }, {
+        //   text: '常見問題',
+        //   title: '常見問題',
+        //   href: "#/qa",
+        //   action: 'link'
         }, {
-          text: '常見問題',
-          title: '常見問題',
-          href: "#/qa",
-          action: 'link'
-        }, {
-          text: 'FB',
+          text: 'Facebook',
           // icon: 'email',
-          title: 'FB',
+          title: 'Facebook',
           href: "https://www.facebook.com/hackNTU/",
           target: "_blank"
           // action: 'link'

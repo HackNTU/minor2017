@@ -17,7 +17,7 @@
     <v-card>
       <v-card-text>
         <p class="text-xs-left text-lg-center">
-          HackNTU是一個學生自發性創辦的非營利組織，籌辦了台灣第一場大型校園Hackathon，目標成為學術界與產業間的溝通橋樑。我們提供有Hacker Spirit的學生交流的平台，提倡動手解決問題，並致力於協助大家獲得技術上的能力。<br>HackNTU相信聚集並且培養擁有Hacker spirit的Hacker們，能夠創造一個更美好的世界！</p>
+          HackNTU是一個學生自發性創辦的非營利組織，籌辦了臺灣第一場大型校園Hackathon，目標成為學術界與產業間的溝通橋樑。我們提供有Hacker Spirit的學生交流的平台，提倡動手解決問題，並致力於協助大家獲得技術上的能力。<br>HackNTU相信聚集並且培養擁有Hacker spirit的Hacker們，能夠創造一個更美好的世界！</p>
         <img src="public/hackntu_logo.png" alt="hackntu logo" style="float:center;max-width:20em;hight:auto;">
       </v-card-text>
     </v-card>
