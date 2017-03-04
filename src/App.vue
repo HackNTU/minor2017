@@ -3,7 +3,7 @@
 
       <v-toolbar class="grey lighten-2">
         <v-toolbar-logo class="hidden-sm-and-down">
-          <img src="../public/hackntu-logo.png" height="42px" alt="hackntu-logo">
+          <img src="public/hackntu-logo.png" height="42px" alt="hackntu-logo">
           <!-- <img src="../public/hackntu-logo.png" style="-webkit-filter: drop-shadow(5px 5px 5px #FFF); filter: drop-shadow(2px 2px 3px #000);" height="42px" alt="hackntu-logo"> -->
         </v-toolbar-logo>
         <v-toolbar-items v-for="item in items" :key="item.id">
