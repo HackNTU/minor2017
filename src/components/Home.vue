@@ -13,7 +13,7 @@
 
     <signup></signup>
 
-    <partners></partners>
+    <!-- <partners></partners> -->
 
   </div>
 </template>

@@ -4,7 +4,7 @@
       <h3>評審介紹</h3>
       <h6>圖片、姓名、稱號、簡介...</h6>
 
-      <div v-for="reviewer in reviewers" class="mw-1000">
+      <div v-for="reviewer in reviewers" :key="reviewer.id" class="mw-1000">
         <!-- RWD reference example: http://www.w3schools.com/css/tryit.asp?filename=trycss_image_gallery_responsive -->
         <div class="responsive">
           <div class="img">

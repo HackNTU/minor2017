@@ -1,14 +1,8 @@
 <template>
   <div>
 
-    <div class="parallax" style="background-image: url('public/fintech.jpg')">
-    <!-- use inline style to avoid url() module resolve problem -->
-      <div class="center" style="color:#FFF">
-        <img src="public/v.png" max-width="50px" alt="hackNTU-logo">
-        <h6 style="color:#FFF" class="mt-2 mb-0">HackNTU x 國泰</h6>
-        <h2 style="color:#FFF">數據分析黑客松</h2>
-        <p>數據分析黑客松實戰演練，成為下一個金融界的跨界人才！</p>
-      </div>
+    <div class="parallax">
+      <img id="title" class="center" src="public/title.png" max-width="10px" alt="hackNTU-logo">
     </div>
 
   </div>
@@ -20,10 +14,6 @@ export default {
 </script>
 <style scoped>
 .parallax {
-  /* The image used */
-  /*background-image: url('public/fintech.jpg');*/
-  /* ^this would cause url() module resolve problem, maybe it is a loader bug*/
-
   /* Set a specific height */
   height: 70vh;
 
@@ -32,13 +22,43 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  /* Set the gradient to background-image only */
+  background-image: url('../../public/bg-prism-2x.png');
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 100%), url('../../public/bg-prism-2x.png');
+
 }
 .center {
-  top: 50%;
+  top: 30%;
   transform: translateY(30%);
   -ms-transform: translateY(30%);
   -moz-transform: translateY(30%);
   -webkit-transform: translateY(30%);
   -o-transform: translateY(30%);
+  /*border: green solid 1px;*/
+}
+#prism {
+  /*border: blue solid 3px;*/
+  position: fixed;
+  top: 15%;
+  /*left: 10%;*/
+  opacity: 0.4;
+  /*width: 80%;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150%;
+  /*z-index: -1;*/
+  /*display: block;*/
+  /*margin: 0 auto;*/
+}
+#title {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  filter: drop-shadow(20px 20px 20px #FFF);
+  /*border: yellow solid 1px;*/
 }
 </style>

@@ -2,14 +2,14 @@
   <section class="mt-5 mb-0">
 
     <v-card>
-      <v-card-row class="blue darken-1">
+      <v-card-row class="green lighten-2">
         <v-card-title>
-          <span class="white--text text-xs-center text-sm-left">活動辦法</span>
+          <span class="black--text text-xs-center text-sm-left">活動辦法</span>
         </v-card-title>
       </v-card-row>
 
       <template class="hidden-sm-and-down">
-        <v-card-row v-for="rule in rules">
+        <v-card-row v-for="rule in rules" :key="rule.id">
           <v-card-text class="text-xs-left mx-4">
             <strong><div>{{rule.get('Item')}}</div></strong>
             {{rule.get('Descr')}}

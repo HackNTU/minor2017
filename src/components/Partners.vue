@@ -1,8 +1,11 @@
 <template>
   <section>
     <h3>合作夥伴</h3>
+    <div class="">
+        <hr>
+    </div>
 
-    <div v-for="partner in partners" class="mw-1000">
+    <div v-for="partner in partners" :key="partner.id" class="mw-1000">
       <div class="responsive">
         <div class="img">
           <a target="_blank" :href="partner.get('Link')">

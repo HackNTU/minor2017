@@ -5,7 +5,7 @@
     <h4>副標題</h4>
 
     <v-expansion-panel>
-      <v-expansion-panel-content v-for="qa in qas" class="py-2">
+      <v-expansion-panel-content v-for="qa in qas" :key="qa.id" class="py-2">
         <div slot="header" class="mr-5">{{qa.get('Question')}}</div>
         <v-card class="my-1">
           <v-card-text class="grey lighten-3">{{qa.get('Answer')}}</v-card-text>

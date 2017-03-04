@@ -1,30 +1,15 @@
 <template>
   <div>
 
-      <!-- simple items -->
-      <v-row v-for="item in items" class="my-2">
+      <v-row v-for="item in items" :key="item.id" class="my-2">
         <v-col xs6="xs6" class="text-xs-right">
-          <v-chip label outline class="red red--text mr-5">
+          <v-chip label outline class="black black--text mr-5">
             <v-icon left>label</v-icon>{{item.chip}}
           </v-chip>
         </v-col>
         <v-col xs6="xs6" class="text-xs-left">
-          <span class="white--text">{{item.content}}</span>
-        </v-col>
-      </v-row>
-
-
-      <!-- complex items -->
-      <v-row>
-        <v-col xs6="xs6" class="text-xs-right">
-          <v-chip label outline class="red red--text mr-5">
-            <v-icon left>label</v-icon>贊助單位
-          </v-chip>
-        </v-col>
-        <v-col xs6="xs6" class="text-xs-left">
-          <div class="white--text" v-for="p in partners">
-            <img :src="p.get('Photo')[0].url" height="30em">
-          </div>
+          <div v-if="item.href"><a :href="item.href">{{item.content}}</a></div>
+          <div v-else class="black--text">{{item.content}}</div>
         </v-col>
       </v-row>
 
@@ -41,16 +26,18 @@ export default {
       items:[
         {
           chip: '主辦單位',
-          content: 'HackNTU 台大黑客松',
+          content: 'HackNTU臺大黑客松',
         },{
-          chip: '粉絲專頁',
-          content: 'facebook.com/hackNTU/',
-        },{
-          chip: '聯絡電話',
-          content: '0901-234-567',
+          chip: '聯合主辦',
+          content: '國泰金控',
         },{
           chip: '聯絡信箱',
           content: 'hackntu@gmail.com',
+        //   href: 'mailto:hackntu@gmail.com',
+        },{
+          chip: '粉絲專頁',
+          content: 'facebook.com/hackNTU',
+          href: 'https://facebook.com/hackntu/',
         }
       ]
     }

@@ -1,15 +1,15 @@
 <template>
   <section>
 
-    <h3>活動流程</h3>
+    <h4 class="yellow-minor2017 ma-0 pt-2">活動流程</h4>
 
     <v-tabs id="mobile-tabs-3" grow>
-      <v-tab-item ripple :href="'/#/#day1'" slot="activators">
+      <v-tab-item ripple :href="'/#'" slot="activators">
         <pre v-on:click="tab=318" class="tab">   </pre>
         <div v-on:click="tab=318" class="tab">3/18(六)</div>
         <pre v-on:click="tab=318" class="tab">   </pre>
       </v-tab-item>
-      <v-tab-item ripple :href="'/#/#day2'" slot="activators">
+      <v-tab-item ripple :href="'/#'" slot="activators">
         <pre v-on:click="tab=319" class="tab">   </pre>
         <div v-on:click="tab=319" class="tab">3/19(日)</div>
         <pre v-on:click="tab=319" class="tab">   </pre>
