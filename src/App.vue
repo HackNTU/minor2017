@@ -1,8 +1,11 @@
 <template>
   <v-app top-toolbar footer>
 
-      <v-toolbar class="blue-grey darken-4">
-        <v-toolbar-logo class="hidden-sm-and-down">HackNTU</v-toolbar-logo>
+      <v-toolbar class="grey lighten-1">
+        <v-toolbar-logo class="hidden-sm-and-down">
+          <img src="../public/hackntu-logo.png" height="42px" alt="hackntu-logo">
+          <!-- <img src="../public/hackntu-logo.png" style="-webkit-filter: drop-shadow(5px 5px 5px #FFF); filter: drop-shadow(2px 2px 3px #000);" height="42px" alt="hackntu-logo"> -->
+        </v-toolbar-logo>
         <v-toolbar-items v-for="item in items" :key="item.id">
           <v-toolbar-item ripple v-bind:href="item.href"> {{ item.text }} </v-toolbar-item>
         </v-toolbar-items>
