@@ -1,7 +1,7 @@
 <template>
   <section>
 
-    <h3>活動流程</h3>
+    <h4 class="yellow-minor2017 ma-0 pt-2">活動流程</h4>
 
     <v-tabs id="mobile-tabs-3" grow>
       <v-tab-item ripple :href="'/#'" slot="activators">

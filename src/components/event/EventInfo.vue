@@ -3,9 +3,9 @@
     <v-card>
 
       <!-- Title -->
-      <v-card-row class="blue darken-1">
+      <v-card-row class="green lighten-2">
         <v-card-title>
-          <span class="white--text">活動資訊</span>
+          <span class="black--text">活動資訊</span>
         </v-card-title>
       </v-card-row>
 
