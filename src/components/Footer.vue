@@ -3,13 +3,13 @@
 
       <v-row v-for="item in items" :key="item.id" class="my-2">
         <v-col xs6="xs6" class="text-xs-right">
-          <v-chip label outline class="red red--text mr-5">
+          <v-chip label outline class="black black--text mr-5">
             <v-icon left>label</v-icon>{{item.chip}}
           </v-chip>
         </v-col>
         <v-col xs6="xs6" class="text-xs-left">
           <div v-if="item.href"><a :href="item.href">{{item.content}}</a></div>
-          <div v-else class="white--text">{{item.content}}</div>
+          <div v-else class="black--text">{{item.content}}</div>
         </v-col>
       </v-row>
 
@@ -36,7 +36,7 @@ export default {
         //   href: 'mailto:hackntu@gmail.com',
         },{
           chip: '粉絲專頁',
-          content: 'facebook.com/hackNTU/',
+          content: 'facebook.com/hackNTU',
           href: 'https://facebook.com/hackntu/',
         }
       ]
