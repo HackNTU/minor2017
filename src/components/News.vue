@@ -4,6 +4,7 @@
     <v-tabs id="mobile- tabs-6" scroll-bars class="mt-0">
       <v-tab-item
         v-for="a_piece_of_news in news"
+        :key="a_piece_of_news.id"
         v-bind:href="'#mobile-tabs-6-' + a_piece_of_news.index"
         slot="activators">
 

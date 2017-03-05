@@ -5,6 +5,7 @@
     <v-carousel icon="remove">
       <v-carousel-item
       v-for="pre_event in pre_events"
+      :key="pre_event.id"
       v-bind:src="pre_event.get('Poster')[0].url"
       />
     </v-carousel>

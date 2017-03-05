@@ -1,9 +1,12 @@
 <template>
   <v-app top-toolbar footer>
 
-      <v-toolbar class="blue-grey darken-4">
-        <v-toolbar-logo class="hidden-sm-and-down">HackNTU</v-toolbar-logo>
-        <v-toolbar-items v-for="item in items">
+      <v-toolbar class="grey lighten-2">
+        <v-toolbar-logo class="hidden-sm-and-down">
+          <img src="public/hackntu-logo.png" height="42px" alt="hackntu-logo">
+          <!-- <img src="../public/hackntu-logo.png" style="-webkit-filter: drop-shadow(5px 5px 5px #FFF); filter: drop-shadow(2px 2px 3px #000);" height="42px" alt="hackntu-logo"> -->
+        </v-toolbar-logo>
+        <v-toolbar-items v-for="item in items" :key="item.id">
           <v-toolbar-item ripple v-bind:href="item.href"> {{ item.text }} </v-toolbar-item>
         </v-toolbar-items>
       </v-toolbar>
@@ -22,8 +25,8 @@
 
     <!-- Footer -->
     <footer>
-      <minor2017footer class="blue-grey darken-4 text-xs-center mt-5 mb-0 pa-3"></minor2017footer>
-      <v-footer class="blue-grey darken-4"></v-footer>
+      <minor2017footer class="grey lighten-1 text-xs-center mt-5 mb-0 pa-3"></minor2017footer>
+      <v-footer class="grey lighten-1"></v-footer>
     </footer>
 
   </v-app>
@@ -50,15 +53,15 @@ export default {
           title: '報名',
           href: "#/signup",
           action: 'link'
+        // }, {
+        //   text: '常見問題',
+        //   title: '常見問題',
+        //   href: "#/qa",
+        //   action: 'link'
         }, {
-          text: '常見問題',
-          title: '常見問題',
-          href: "#/qa",
-          action: 'link'
-        }, {
-          text: 'FB',
+          text: 'Facebook',
           // icon: 'email',
-          title: 'FB',
+          title: 'Facebook',
           href: "https://www.facebook.com/hackNTU/",
           target: "_blank"
           // action: 'link'
