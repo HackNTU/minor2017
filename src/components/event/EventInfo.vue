@@ -41,7 +41,7 @@ export default {
       items: [
         {
           title: '時間',
-          descp: '2017/03/18 8:30 報到 ～ 2017/03/19 18:00 賦歸（兩天Hacking不間斷！）',
+          descp: '2017/03/18 9:30 報到 ～ 2017/03/19 18:00 賦歸（兩天Hacking不間斷！）',
           icon:  'watch_later',
         },
         {
