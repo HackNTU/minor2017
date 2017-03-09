@@ -51,7 +51,7 @@ export default {
         }, {
           text: '報名',
           title: '報名',
-          href: "#/signup",
+          href: "http://www.accupass.com/go/2017hackntu_minor",
           action: 'link'
         // }, {
         //   text: '常見問題',
