@@ -1,8 +1,7 @@
 <template>
   <section>
 
-    <h3>常見問題</h3>
-    <h4>副標題</h4>
+    <br><h4>常見問題</h4><br>
 
     <v-expansion-panel>
       <v-expansion-panel-content v-for="qa in qas" :key="qa.id" class="py-2">

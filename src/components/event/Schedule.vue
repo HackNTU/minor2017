@@ -32,7 +32,8 @@
           <template v-for="s in schedule" v-if="s.get('Date')=='2017-03-18'">
             <tr>
               <td v-text="s.get('Time')"></td>
-              <td v-text="s.get('Name')"></td>
+                <td v-if="s.get('Link')"><a :href="s.get('Link')">{{ s.get('Name') }}</a></td>
+                <td v-else v-text="s.get('Name')"></td>
             </tr>
           </template>
         </template>
@@ -40,7 +41,8 @@
           <template v-for="s in schedule" v-if="s.get('Date')=='2017-03-19'">
             <tr>
               <td v-text="s.get('Time')"></td>
-              <td v-text="s.get('Name')"></td>
+              <td v-if="s.get('Link')"><a :href="s.get('Link')">{{ s.get('Name') }}</a></td>
+              <td v-else v-text="s.get('Name')"></td>
             </tr>
           </template>
         </template>
