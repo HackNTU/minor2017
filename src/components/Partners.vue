@@ -1,33 +1,92 @@
 <template>
-  <div>
+  <section>
     <h3>合作夥伴</h3>
-    <pre>合作夥伴的一一介紹</pre>
     <div class="">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <hr>
     </div>
-    <v-container fluid="fluid">
-      <v-row>
 
-        <v-col xs2="xs2" v-for="i in numbers">
-          <v-card class="primary">
-            <v-card-text>2</v-card-text>
-            {{i}}
-          </v-card>
-        </v-col>
+    <div v-for="partner in partners" :key="partner.id" class="mw-1000">
+      <div class="responsive">
+        <div class="img">
+          <a target="_blank" :href="partner.get('Link')">
+            <img :src="partner.get('Photo')[0].url" alt="Trolltunga Norway" width="300" height="200">
+          </a>
+          <div class="desc">
+            <b>{{ partner.get('Name') }}</b><br>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      </v-row>
-    </v-container>
-  </div>
+  </section>
 </template>
+
 <script>
+import { partners } from '../service/airtable.js'
 export default {
   name: 'partners',
-  data: function() {
+  data: function(){
     return {
-      numbers: [ 2, 3, 4, 5 ]
+      partners: partners
     }
   }
 }
 </script>
+
 <style scoped>
+div.img {
+  border: 1px solid #ccc;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.img:hover {
+  border: 1px solid #777;
+}
+
+div.img img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+section {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
 </style>

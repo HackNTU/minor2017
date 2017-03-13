@@ -1,3 +1,5 @@
+/* Change Vuetify component color here: node_modules/vuetify/src/stylus/settings/_colors.styl */
+
 .intro {
   display: flex;
   justify-content: center;
@@ -24,4 +26,23 @@ main {
 
 h2 {
   text-align: center;
+}
+
+h3 {
+  padding-top: 20px
+}
+.pink-minor2017 {
+  background-color: #F6B8B2;
+}
+.yellow-minor2017 {
+  background-color: #FFE96E
+}
+.green-minor2017 {
+  background-color: #C9E2AA
+}
+.blue-minor2017 {
+  background-color: #BAE3F9
+}
+.indigo-minor2017 {
+  border: #314D98 solid 5px;
 }

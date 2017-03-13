@@ -1,14 +1,19 @@
 <template>
-  <v-app top-navbar footer>
+  <v-app top-toolbar footer>
 
-      <v-navbar class="blue-grey darken-4">
-        <v-navbar-logo class="hidden-sm-and-down">HackNTU</v-navbar-logo>
-        <v-navbar-items v-bind:items="items"></v-navbar-items>
-      </v-navbar>
+      <v-toolbar class="grey lighten-2">
+        <v-toolbar-logo class="hidden-sm-and-down">
+          <img src="public/hackntu-logo.png" height="42px" alt="hackntu-logo">
+          <!-- <img src="../public/hackntu-logo.png" style="-webkit-filter: drop-shadow(5px 5px 5px #FFF); filter: drop-shadow(2px 2px 3px #000);" height="42px" alt="hackntu-logo"> -->
+        </v-toolbar-logo>
+        <v-toolbar-items v-for="item in items" :key="item.id">
+          <v-toolbar-item ripple v-bind:href="item.href"> {{ item.text }} </v-toolbar-item>
+        </v-toolbar-items>
+      </v-toolbar>
 
     <main>
       <!-- <v-sidebar id="sidebar" :items="items" left fixed router close-on-click></v-sidebar> -->
-      <v-content>
+      <v-content class="pt-0">
         <v-container fluid>
           <transition name="slide-fade" mode="out-in">
             <router-view></router-view>
@@ -19,26 +24,25 @@
     </main>
 
     <!-- Footer -->
-    <v-footer class="blue-grey darken-4">
-      <div class="text-xs-center">HackNTU © 2017</div>
-    </v-footer>
+    <footer>
+      <minor2017footer class="grey lighten-1 text-xs-center mt-5 mb-0 pa-3"></minor2017footer>
+      <v-footer class="grey lighten-1"></v-footer>
+    </footer>
 
   </v-app>
 </template>
 <script>
+import Footer from './components/Footer.vue'
 export default {
   name: 'App',
-  mounted() {
-    this.$vuetify.init();
-  },
-  data() {
+  data: function(){
     return {
       home:{
         text: 'HackNTU',
         href: '#/',
         action: 'link'
       },
-      items: [ //
+      items: [
         {
           text: '關於活動',
           title: '關於活動',
@@ -47,11 +51,11 @@ export default {
         }, {
           text: '報名',
           title: '報名',
-          href: "#/signup",
+          href: "http://www.accupass.com/go/2017hackntu_minor",
           action: 'link'
         }, {
-          text: '常見問題',
-          title: '常見問題',
+          text: 'FAQ',
+          title: 'FAQ',
           href: "#/qa",
           action: 'link'
         }, {
@@ -64,6 +68,9 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    minor2017footer: Footer,
   }
 }
 </script>

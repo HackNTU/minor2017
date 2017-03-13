@@ -1,25 +1,28 @@
 <template>
   <div>
 
-    <parallax></parallax><br><br>
+    <parallax></parallax>
 
-    <about id="about"></about><br><br>
+    <!-- <news></news> -->
 
-    <schedule></schedule><br><br>
+    <about></about>
 
-    <reviewer></reviewer><br><br>
+    <!-- <topics></topics><br><br><br> -->
 
-    <signup id="signup"></signup><br><br>
+    <event></event>
 
-    <partners id="partners"></partners><br><br>
+    <signup></signup>
+
+    <!-- <partners></partners> -->
 
   </div>
 </template>
 <script>
 import Parallax from './Parallax.vue'
+import News from './News.vue'
 import About from './About.vue'
-import Schedule from './Schedule.vue'
-import Reviewer from './Reviewer.vue'
+import Topics from './Topics.vue'
+import Event from './event/Event.vue'
 import Signup from './Signup.vue'
 import Partners from './Partners.vue'
 
@@ -27,9 +30,10 @@ export default {
   name: 'home',
   components: {
     parallax: Parallax,
+    news: News,
     about: About,
-    schedule: Schedule,
-    reviewer: Reviewer,
+    topics: Topics,
+    event: Event,
     signup: Signup,
     partners: Partners,
   },

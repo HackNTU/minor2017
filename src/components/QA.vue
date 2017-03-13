@@ -1,24 +1,36 @@
 <template>
-  <div>
-    <h3>Q & A</h3>
+  <section>
 
-    <p>Q Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>A Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <br><h4>常見問題</h4><br>
 
-    <p>Q Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>A Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <v-expansion-panel>
+      <v-expansion-panel-content v-for="qa in qas" :key="qa.id" class="py-2">
+        <div slot="header" class="mr-5">{{qa.get('Question')}}</div>
+        <v-card class="my-1">
+          <v-card-text class="grey lighten-3">{{qa.get('Answer')}}</v-card-text>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
 
-  </div>
-
+  </section>
 </template>
+
 <script>
+import { qas } from '../service/airtable.js'
 export default {
-  name: 'qa'
+  name: 'qa',
+  data: function() {
+    return{
+      qas: qas,
+    }
+  }
 }
 </script>
 <style scoped>
-p {
-  padding: 1000;
-  margin: 1000;
+section {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 </style>
