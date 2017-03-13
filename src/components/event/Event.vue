@@ -3,11 +3,12 @@
 
     <schedule></schedule>
 
-    <rule></rule>
 
     <!-- <preevents></preevents> -->
 
     <eventinfo></eventinfo>
+
+    <rule></rule>
 
   </section>
 </template>

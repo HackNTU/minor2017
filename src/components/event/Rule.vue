@@ -12,7 +12,9 @@
         <v-card-row v-for="rule in rules" :key="rule.id">
           <v-card-text class="text-xs-left mx-4">
             <strong><div>{{rule.get('Item')}}</div></strong>
-            {{rule.get('Descr')}}
+            <div v-for="line in rule.get('Descr').split('\n')">
+              <p>{{line}}</p>
+            </div>
           </v-card-text>
         </v-card-row>
       </template>
