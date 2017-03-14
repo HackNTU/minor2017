@@ -12,6 +12,8 @@ import About from './components/About.vue'
 import Event from './components/event/Event.vue'
 import Signup from './components/Signup.vue'
 import Partners from './components/Partners.vue'
+import Timer from './components/Timer.vue'
+import Countdown from './components/Countdown.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +24,7 @@ const routes = [
   { path: '/signup', component: Signup },
   // STEP 2: 如果你的component即是一個頁面，直接在此綁定到路徑'/path'
   { path: '/template', component: Template },
+  { path: '/timer', component: Timer },
 ];
 
 const router = new VueRouter({

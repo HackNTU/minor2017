@@ -25,7 +25,7 @@
 
     <!-- Footer -->
     <footer>
-      <minor2017footer class="grey lighten-1 text-xs-center mt-5 mb-0 pa-3"></minor2017footer>
+      <minor2017footer class="grey lighten-1 text-xs-center mt-0 mb-0 pa-3"></minor2017footer>
       <v-footer class="grey lighten-1"></v-footer>
     </footer>
 
