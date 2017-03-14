@@ -4,7 +4,7 @@
   <div id="countdown">
 
     <div class="block">
-      <p class="digit">{{ days | two_digits }}</p>
+      <p class="digit">{{ days }}</p>
       <p class="text">Days</p>
     </div>
     <div class="block">
@@ -32,7 +32,6 @@ export default {
     window.setInterval(() => {
       this.now = Math.trunc((new Date()).getTime() / 1000);
     },1000);
-    console.log("READY!!!");
   },
 
   props: ['deadline'],
@@ -41,6 +40,16 @@ export default {
     return {
       now: Math.trunc((new Date()).getTime() / 1000),
     }
+  },
+
+  filters: {
+    two_digits: function (value) {
+      if(value.toString().length < 2)
+      {
+        return "0"+value.toString();
+      }
+      return value.toString();
+    },
   },
 
   computed: {
@@ -69,11 +78,11 @@ export default {
 .block {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 2vw;
 }
 .text {
   color: #1abc9c;
-  font-size: 40px;
+  font-size: 3vw;
   font-family: 'Roboto Condensed', serif;
   font-weight: 40;
   margin-top: 10px;
@@ -82,10 +91,10 @@ export default {
 }
 .digit {
   color: #ecf0f1;
-  font-size: 150px;
+  font-size: 16vw;
   font-weight: 100;
   font-family: 'Roboto', serif;
-  margin: 10px;
+  margin: 1vw;
   text-align: center;
 }
 </style>

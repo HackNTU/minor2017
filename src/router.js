@@ -24,6 +24,7 @@ const routes = [
   { path: '/signup', component: Signup },
   // STEP 2: 如果你的component即是一個頁面，直接在此綁定到路徑'/path'
   { path: '/template', component: Template },
+  { path: '/timer', component: Timer },
 ];
 
 const router = new VueRouter({
