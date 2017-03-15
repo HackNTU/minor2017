@@ -1,10 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>TIMER!!!</title>
-  </head>
-  <body>
-    <p>im timer</p>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>TIMER!!!</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="timer">
+    {{message}}
+  </div>
+  <section>
+    <div id="left-box">
+      #left-box
+      <div id="countdown">{{msgg}}
+
+        <div class="block">
+          <p class="digit">{{ hours | two_digits }}</p>
+          <p class="text">Hours</p>
+        </div>
+        <div class="block">
+          <p class="digit">{{ minutes | two_digits }}</p>
+          <p class="text">Minutes</p>
+        </div>
+        <div class="block">
+          <p class="digit">{{ seconds | two_digits }}</p>
+          <p class="text">Seconds</p>
+        </div>
+
+      </div>
+    </div>
+    <div id="right-box">
+      #right-box
+    </div>
+  </section>
+</body>
 </html>
+
+<script src="timer.js" charset="utf-8"></script>
+<script src="countdown.js" charset="utf-8"></script>
+
+<!-- Layout -->
+<style scoped>
+#left-box{
+position: fixed;
+top: 0;
+left: 0;
+width: 70vw;
+height: 100vh;
+border: 1px grey solid;
+}
+#right-box{
+position: fixed;
+top: 0;
+right: 0;
+display: flex;
+height: 100vh;
+width: 30vw;
+border: 1px red solid;
+}
+</style>
+
+<!-- Countdown -->
+<style lang="css">
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100);
+
+#countdown {
+    align-items: center;
+    bottom: 0;
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.text {
+    color: #1abc9c;
+    font-size: 40px;
+    font-family: 'Roboto Condensed', serif;
+    font-weight: 40;
+    margin-top:10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.digit {
+    color: #ecf0f1;
+    font-size: 150px;
+    font-weight: 100;
+    font-family: 'Roboto', serif;
+    margin: 10px;
+    text-align: center;
+}
+</style>
