@@ -12,8 +12,8 @@ import About from './components/About.vue'
 import Event from './components/event/Event.vue'
 import Signup from './components/Signup.vue'
 import Partners from './components/Partners.vue'
-import Timer from './components/Timer.vue'
-import Countdown from './components/Countdown.vue'
+import Timer from './components/timer/Timer.vue'
+import Countdown from './components/timer/Countdown.vue'
 
 Vue.use(VueRouter)
 

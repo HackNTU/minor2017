@@ -1,20 +1,25 @@
 <template>
-  <section class="py-0 my-0">
+  <div class="py-0 my-0 height100vh">
 
       <div id="countdown_digits">
-        <Countdown deadline="Sun Mar 19 2017 14:00:00 GMT+0800 (CST)"></Countdown>
+        <countdown deadline="Sun Mar 19 2017 14:00:00 GMT+0800 (CST)"></countdown>
       </div>
 
-      <a href="#"></a><v-btn info large>加入Discord</v-btn>
+      <a href="#"><v-btn info large>加入Discord頻道</v-btn></a>
       <!-- <v-breadcrumbs id="breadcrumbs" divider="/" v-bind:items="channels"></v-breadcrumbs> -->
 
-  </section>
+      <div style="border:1px green solid;">
+        <schedule></schedule>
+      </div>
+
+  </div>
 </template>
 
 <!-- ====================================================================== -->
 
 <script>
 import Countdown from './Countdown.vue';
+import Schedule from './Schedule.vue'
 export default {
   name: 'Timer',
   data: function () {
@@ -26,7 +31,10 @@ export default {
       ],
     }
   },
-  components: {Countdown},
+  components: {
+    countdown: Countdown,
+    schedule: Schedule,
+  },
 }
 
 </script>
@@ -34,7 +42,7 @@ export default {
 <!-- ====================================================================== -->
 
 <style scoped>
-section {
+.height100vh {
   background-color: #34495E;
   height: 100vh;
 }
